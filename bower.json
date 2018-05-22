@@ -1,0 +1,22 @@
+{
+  "name": "account",
+  "authors": [
+    "Luca Milanesio <luca.milanesio@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "APL 2.0",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "angular": "^1.7.0"
+  }
+}
