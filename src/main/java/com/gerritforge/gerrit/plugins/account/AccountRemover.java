@@ -12,15 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account.permissions;
+package com.gerritforge.gerrit.plugins.account;
 
-import com.google.gerrit.extensions.config.CapabilityDefinition;
+import com.google.inject.ImplementedBy;
 
-public class DeleteAccountCapability extends CapabilityDefinition {
-  public static final String DELETE_ACCOUNT = "deleteAccount";
+@ImplementedBy(GerritAccountRemover.class)
+public interface AccountRemover {
 
-  @Override
-  public String getDescription() {
-    return "Delete any account";
-  }
+  void removeAccount(int accountId) throws Exception;
+
+  boolean canDelete(int accountId);
 }

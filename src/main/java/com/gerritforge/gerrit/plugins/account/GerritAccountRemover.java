@@ -12,8 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account;
+package com.gerritforge.gerrit.plugins.account;
 
+import com.gerritforge.gerrit.plugins.account.permissions.DeleteAccountCapability;
+import com.gerritforge.gerrit.plugins.account.permissions.DeleteOwnAccountCapability;
 import com.google.gerrit.extensions.annotations.PluginName;
 import com.google.gerrit.extensions.api.GerritApi;
 import com.google.gerrit.extensions.api.access.PluginPermission;
@@ -29,8 +31,7 @@ import com.google.gerrit.server.account.externalids.ExternalId;
 import com.google.gerrit.server.permissions.PermissionBackend;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.googlesource.gerrit.plugins.account.permissions.DeleteAccountCapability;
-import com.googlesource.gerrit.plugins.account.permissions.DeleteOwnAccountCapability;
+
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;

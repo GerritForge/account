@@ -11,8 +11,8 @@ gerrit_plugin(
     srcs = glob(["src/main/java/**/*.java"]),
     manifest_entries = [
         "Gerrit-PluginName: account",
-        "Gerrit-Module: com.googlesource.gerrit.plugins.account.Module",
-        "Gerrit-SshModule: com.googlesource.gerrit.plugins.account.SshModule",
+        "Gerrit-Module: com.gerritforge.gerrit.plugins.account.Module",
+        "Gerrit-SshModule: com.gerritforge.gerrit.plugins.account.SshModule",
     ],
     resources = glob(["src/main/resources/**/*"]),
 )

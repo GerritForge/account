@@ -12,16 +12,16 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account;
+package com.gerritforge.gerrit.plugins.account;
 
 import static com.google.gerrit.server.account.AccountResource.ACCOUNT_KIND;
 
+import com.gerritforge.gerrit.plugins.account.permissions.DeleteAccountCapability;
+import com.gerritforge.gerrit.plugins.account.permissions.DeleteOwnAccountCapability;
 import com.google.gerrit.extensions.annotations.Exports;
 import com.google.gerrit.extensions.config.CapabilityDefinition;
 import com.google.gerrit.extensions.restapi.RestApiModule;
 import com.google.inject.AbstractModule;
-import com.googlesource.gerrit.plugins.account.permissions.DeleteAccountCapability;
-import com.googlesource.gerrit.plugins.account.permissions.DeleteOwnAccountCapability;
 
 class Module extends AbstractModule {
 

@@ -12,19 +12,22 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account;
+package com.gerritforge.gerrit.plugins.account;
 
-import com.google.gerrit.server.IdentifiedUser;
-import java.util.Set;
+import com.google.gerrit.reviewdb.client.Account;
+import com.google.gerrit.server.IdentifiedUser.GenericFactory;
+import com.google.gerrit.server.account.AccountResource;
+import com.google.inject.Inject;
 
-public class AccountPersonalInformation {
-  public final String fullname;
-  public final String username;
-  public final Set<String> emails;
+public class AccountResourceFactory {
+  private final GenericFactory userFactory;
 
-  public AccountPersonalInformation(IdentifiedUser user) {
-    this.fullname = user.getName();
-    this.username = user.getUserName();
-    this.emails = user.getEmailAddresses();
+  @Inject
+  public AccountResourceFactory(GenericFactory userFactory) {
+    this.userFactory = userFactory;
+  }
+
+  public AccountResource create(int accountId) {
+    return new AccountResource(userFactory.create(new Account.Id(accountId)));
   }
 }

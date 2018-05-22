@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account;
+package com.gerritforge.gerrit.plugins.account;
 
 import com.google.common.annotations.VisibleForTesting;
 import com.google.gerrit.server.account.AccountResource;

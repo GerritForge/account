@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account;
+package com.gerritforge.gerrit.plugins.account;
 
-import com.google.inject.ImplementedBy;
+public class DeleteAccountResponse {
+  public final boolean deleted;
+  public final AccountPersonalInformation accountInfo;
 
-@ImplementedBy(GerritAccountRemover.class)
-public interface AccountRemover {
-
-  void removeAccount(int accountId) throws Exception;
-
-  boolean canDelete(int accountId);
+  public DeleteAccountResponse(boolean deleted, AccountPersonalInformation accountInfo) {
+    this.deleted = deleted;
+    this.accountInfo = accountInfo;
+  }
 }

@@ -12,16 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account.test;
+package com.gerritforge.gerrit.plugins.account.test;
 
 import static org.mockito.Mockito.*;
 
+import com.gerritforge.gerrit.plugins.account.AccountRemover;
+import com.gerritforge.gerrit.plugins.account.DeleteAccount;
 import com.google.gerrit.extensions.restapi.AuthException;
 import com.google.gerrit.reviewdb.client.Account;
 import com.google.gerrit.server.IdentifiedUser;
 import com.google.gerrit.server.account.AccountResource;
-import com.googlesource.gerrit.plugins.account.AccountRemover;
-import com.googlesource.gerrit.plugins.account.DeleteAccount;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

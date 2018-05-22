@@ -12,14 +12,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-package com.googlesource.gerrit.plugins.account;
+package com.gerritforge.gerrit.plugins.account;
 
-public class DeleteAccountResponse {
-  public final boolean deleted;
-  public final AccountPersonalInformation accountInfo;
+import com.google.gerrit.server.IdentifiedUser;
+import java.util.Set;
 
-  public DeleteAccountResponse(boolean deleted, AccountPersonalInformation accountInfo) {
-    this.deleted = deleted;
-    this.accountInfo = accountInfo;
+public class AccountPersonalInformation {
+  public final String fullname;
+  public final String username;
+  public final Set<String> emails;
+
+  public AccountPersonalInformation(IdentifiedUser user) {
+    this.fullname = user.getName();
+    this.username = user.getUserName();
+    this.emails = user.getEmailAddresses();
   }
 }
