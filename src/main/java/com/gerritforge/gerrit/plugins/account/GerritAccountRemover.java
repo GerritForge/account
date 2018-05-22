@@ -24,9 +24,11 @@ import com.google.gerrit.extensions.api.accounts.Accounts;
 import com.google.gerrit.extensions.common.EmailInfo;
 import com.google.gerrit.extensions.common.SshKeyInfo;
 import com.google.gerrit.extensions.restapi.RestApiException;
+import com.google.gerrit.reviewdb.client.Account;
 import com.google.gerrit.server.CurrentUser;
 import com.google.gerrit.server.account.AccountResource;
 import com.google.gerrit.server.account.PutName;
+import com.google.gerrit.server.account.SetInactiveFlag;
 import com.google.gerrit.server.account.externalids.ExternalId;
 import com.google.gerrit.server.permissions.PermissionBackend;
 import com.google.inject.Inject;
@@ -34,16 +36,14 @@ import com.google.inject.Provider;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class GerritAccountRemover implements AccountRemover {
-  private static final Logger log = LoggerFactory.getLogger(GerritAccountRemover.class);
   private final Accounts accounts;
   private final PutName putName;
   private final AccountResourceFactory accountFactory;
   private final PermissionBackend permissionBackend;
   private final Provider<CurrentUser> userProvider;
+  private final SetInactiveFlag setInactive;
   private final String pluginName;
 
   @Inject
@@ -53,12 +53,14 @@ public class GerritAccountRemover implements AccountRemover {
       AccountResourceFactory accountFactory,
       PermissionBackend permissionBackend,
       Provider<CurrentUser> userProvider,
+      SetInactiveFlag setInactive,
       @PluginName String pluginName) {
     this.accounts = api.accounts();
     this.putName = putName;
     this.accountFactory = accountFactory;
     this.permissionBackend = permissionBackend;
     this.userProvider = userProvider;
+    this.setInactive = setInactive;
     this.pluginName = pluginName;
   }
 
@@ -84,7 +86,7 @@ public class GerritAccountRemover implements AccountRemover {
     removeExternalIds(account);
     removeFullName(getAccountResource(accountId));
     if (account.getActive()) {
-      account.setActive(false);
+      setInactive.deactivate(new Account.Id(accountId));
     }
   }
 
