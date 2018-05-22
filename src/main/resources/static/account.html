@@ -1,0 +1,71 @@
+<!-- 
+ Copyright (C) 2018 GerritForge Ltd
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<!DOCTYPE html>
+<html ng-app="Account">
+
+<head>
+<link rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+  integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+  crossorigin="anonymous">
+<script
+  src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="js/account.js"></script>
+<link rel="stylesheet" href="css/account.css">
+</head>
+
+<body ng-controller="AccountDeleteController">
+
+  <nav class="navbar navbar-light" style="background-color: #ffe6e8">
+    <a class="navbar-brand" href="/">&lt; Back to Gerrit</a> <span
+      class="navbar-text">Personal Information Removal</span>
+  </nav>
+
+  <div class="container-fluid">
+
+    <div class="jumbotron">
+      <h1 class="display-5">Request to remove all Personal Information</h1>
+      <p class="lead">This is the full set of personal information
+        held in Gerrit Code Review and associated to your account and shown
+        in full detail to you for maximum transparency.</p>
+        <p>You can decide that you do not want anymore have a Gerrit account
+        and remove all the data associated to you and have complete control over its removal.</p>
+      <hr class="my-4">
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label> <input type="text"
+            class="form-control" id="username"
+            aria-describedby="emailHelp" value="{{account.username}}"
+            readonly="readonly">
+        </div>
+        <div class="form-group">
+          <label for="fullname">Full name</label> <input type="text"
+            class="form-control" id="fullname"
+            value="{{account.fullname}}" readonly="readonly">
+        </div>
+        <div class="form-group">
+          <label for="emails">E-mails addresses</label> <select multiple
+            class="form-control" id="emails">
+            <option ng-repeat="email in account.emails">{{email}}</option>
+          </select>
+        </div>
+      </form>
+      <a class="btn btn-primary btn-lg" href="#" role="button">DELETE
+        MY ACCOUNT</a>
+    </div>
+  </div>
+</body>
+</html>
