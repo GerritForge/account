@@ -13,6 +13,7 @@ gerrit_plugin(
         "Gerrit-PluginName: account",
         "Gerrit-Module: com.gerritforge.gerrit.plugins.account.Module",
         "Gerrit-SshModule: com.gerritforge.gerrit.plugins.account.SshModule",
+        "Gerrit-HttpModule: com.gerritforge.gerrit.plugins.account.HttpModule",
     ],
     resources = glob(["src/main/resources/**/*"]),
 )
