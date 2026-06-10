@@ -1,3 +1,16 @@
+# Bazel
+/bazel-bin
+/bazel-account
+/bazel-out
+/bazel-testlogs
+/eclipse-out
+/.apt_generated
+/.classpath
+/.project
+/.settings
+/.idea
+*.swp
+
 # Compiled class file
 *.class
 
