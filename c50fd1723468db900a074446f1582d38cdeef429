@@ -16,6 +16,24 @@
       "message": "I see you are partly porting standalone build mode to bzlmod. But should we really care?\n\nAs suggested by @luca.milanesio@gmail.com I remove standalone build mode in owners plugin as well: [1]. Should we do the same here as a preparation change?\n\n[1]: https://gerrit-review.googlesource.com/c/plugins/owners/+/592021",
       "revId": "c50fd1723468db900a074446f1582d38cdeef429",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2515d734_4b1957ad",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019121
+      },
+      "writtenOn": "2026-06-11T18:26:49Z",
+      "side": 1,
+      "message": "Let\u0027s continue when the other change gets merged so that we have the way paved 😉",
+      "parentUuid": "4e6aefb9_b1194a14",
+      "revId": "c50fd1723468db900a074446f1582d38cdeef429",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
