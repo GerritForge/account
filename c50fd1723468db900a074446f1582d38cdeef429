@@ -34,6 +34,24 @@
       "parentUuid": "4e6aefb9_b1194a14",
       "revId": "c50fd1723468db900a074446f1582d38cdeef429",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4a9e2d8b_1c1cda24",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019121
+      },
+      "writtenOn": "2026-06-17T05:57:18Z",
+      "side": 1,
+      "message": "Introduced the prepending change that removes the standalone build.",
+      "parentUuid": "2515d734_4b1957ad",
+      "revId": "c50fd1723468db900a074446f1582d38cdeef429",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
   ]
 }
