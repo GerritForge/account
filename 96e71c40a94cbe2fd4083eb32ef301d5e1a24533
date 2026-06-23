@@ -24,6 +24,30 @@
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "6efcc2ea_c9e03c9b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1019121
+      },
+      "writtenOn": "2026-06-23T15:45:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "b88f0938_6d5a6b7e",
+      "range": {
+        "startLine": 14,
+        "startChar": 0,
+        "endLine": 14,
+        "endChar": 73
+      },
+      "revId": "96e71c40a94cbe2fd4083eb32ef301d5e1a24533",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "9ff8f849_e38d6a3a",
@@ -37,6 +61,24 @@
       "writtenOn": "2026-06-23T14:17:57Z",
       "side": 1,
       "message": "Why did you revert the removal of `external_plugin_deps.bzl`?\n\nAlthough it is still supported, it is primarily retained for two reasons:\n\n* Backward compatibility.\n* Plugins with external dependencies that have not yet been migrated to bzlmod.\n\nThis plugin doesn\u0027t have any external dependencies and thus the `external_plugin_deps.bzl` should be removed. Note, that CI on stable-3.14 still supports it, and would copy the file and resolve the artifacts listed there.\n\nSorry if my earlier comments were misleading. I would keep the previous patch set as-is and only update the commit message to more accurately reflect the intent of the change.",
+      "revId": "96e71c40a94cbe2fd4083eb32ef301d5e1a24533",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fff11e08_ce259dcc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019121
+      },
+      "writtenOn": "2026-06-23T15:45:35Z",
+      "side": 1,
+      "message": "Yeah, that is how I understood it - reverting to previous version and fixing the commit message 😉",
+      "parentUuid": "9ff8f849_e38d6a3a",
       "revId": "96e71c40a94cbe2fd4083eb32ef301d5e1a24533",
       "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
     }
