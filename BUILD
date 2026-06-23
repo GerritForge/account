@@ -1,9 +1,9 @@
 load("//tools/bzl:junit.bzl", "junit_tests")
 load(
     "//tools/bzl:plugin.bzl",
-    "gerrit_plugin",
     "PLUGIN_DEPS",
     "PLUGIN_TEST_DEPS",
+    "gerrit_plugin",
 )
 
 gerrit_plugin(
@@ -31,6 +31,5 @@ java_library(
     visibility = ["//visibility:public"],
     exports = PLUGIN_DEPS + PLUGIN_TEST_DEPS + [
         ":account__plugin",
-        "@mockito//jar",
     ],
 )
