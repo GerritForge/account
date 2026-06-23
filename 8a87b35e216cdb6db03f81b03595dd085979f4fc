@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "d89ab286_71fe7804",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-23T08:51:27Z",
+      "side": 1,
+      "message": "Is this accurate? I removed the support for external_plugin_deps.bzl on master, it will be first time released in gerrit 3.15. Move that statement? It\u0027s enough to say, consume mockito from //lib/mockito.\n\nSee included in for that change: [1]. It\u0027s only master, or what am I missing?\n\n@mockito//jar doesn\u0027t work because if the bzlmod migration in gerrit core, not, because external_plugin_deps.bzl support was removed.\n\n[1]: https://gerrit-review.googlesource.com/c/gerrit/+/566203",
+      "range": {
+        "startLine": 10,
+        "startChar": 55,
+        "endLine": 13,
+        "endChar": 7
+      },
+      "revId": "8a87b35e216cdb6db03f81b03595dd085979f4fc",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "0d9a9422_7ece0aa5",
