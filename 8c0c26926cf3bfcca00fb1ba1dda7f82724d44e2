@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1fae6b5c_b8e91aa1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1019121
+      },
+      "writtenOn": "2026-06-23T07:48:41Z",
+      "side": 1,
+      "message": "it fails due to errorprone [failure](https://gerrit-ci.gerritforge.com/view/Plugins-stable-3.14/job/plugin-account-gh-bazel-stable-3.14/5/console)",
+      "revId": "8c0c26926cf3bfcca00fb1ba1dda7f82724d44e2",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
