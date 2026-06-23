@@ -31,6 +31,5 @@ java_library(
     visibility = ["//visibility:public"],
     exports = PLUGIN_DEPS + PLUGIN_TEST_DEPS + [
         ":account__plugin",
-        "@mockito//jar",
     ],
 )
