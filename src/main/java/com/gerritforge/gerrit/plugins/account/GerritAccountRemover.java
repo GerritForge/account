@@ -99,7 +99,8 @@ public class GerritAccountRemover implements AccountRemover {
   }
 
   private void removeFullName(AccountResource userRsc) throws Exception {
-    putName.apply(userRsc, new NameInput());
+    @SuppressWarnings("unused")
+    var unused = putName.apply(userRsc, new NameInput());
   }
 
   private void removeExternalIds(AccountApi account) throws RestApiException {
