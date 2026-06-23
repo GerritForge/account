@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f8553726_58559ec9",
+        "filename": "BUILD",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1000177
+      },
+      "writtenOn": "2026-06-23T19:46:10Z",
+      "side": 1,
+      "message": "On second thought, is this needed at all? Can you remove it? It should be already exported in PLUGIN_TEST_DEPSm right?",
+      "range": {
+        "startLine": 34,
+        "startChar": 0,
+        "endLine": 34,
+        "endChar": 24
+      },
+      "revId": "99b6e8643961b700773cb734a4de36b3a4e2140c",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735"
+    }
+  ]
+}
