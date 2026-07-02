@@ -16,6 +16,7 @@ gerrit_plugin(
         "Gerrit-HttpModule: com.gerritforge.gerrit.plugins.account.HttpModule",
     ],
     resources = glob(["src/main/resources/**/*"]),
+    deps = ["//plugins/gerrit-bsl-license"],
 )
 
 junit_tests(
