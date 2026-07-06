@@ -10,8 +10,8 @@ Clone or link this plugin into the Gerrit's /plugins source tree.
 ```
   git clone https://gerrit.googlesource.com/gerrit
   git clone https://github.com/GerritForge/account.git
-  cd gerrit/plugin
-  ln -s ../../gerrit-account-plugin account
+  cd gerrit/plugins
+  ln -s ../../account .
 ```
 
 Then issue the bazel build command:

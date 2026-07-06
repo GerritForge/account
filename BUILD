@@ -14,6 +14,7 @@ gerrit_plugin(
     ],
     plugin = "account",
     resources = glob(["src/main/resources/**/*"]),
+    deps = ["//plugins/gerrit-bsl-license"],
 )
 
 gerrit_plugin_tests(
